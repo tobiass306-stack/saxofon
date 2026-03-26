@@ -3,94 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saxofönen – Grön frisör i Mariehamn</title>
+<title>Saxofönen — Grön Frisörsalong i Mariehamn</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+:root {
+  --bg:#F6F8F5;
+  --green:#6F8F7A;
+  --green-dark:#4E6B5B;
+  --accent:#A7C4B5;
+  --text:#1F1F1F;
+  --muted:#6B6B6B;
+}
+
+*{box-sizing:border-box}
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+  background:var(--bg);
 }
 
-header {
-  background: #2e7d32;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+h1,h2,h3{
+  font-family:'Cormorant Garamond',serif;
+  margin:0 0 10px;
 }
 
-button {
-  background: #2e7d32;
-  color: white;
-  border: none;
-  padding: 15px 25px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+nav {
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  z-index:1000;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--text);
+  margin-left:20px;
+  font-size:14px;
+}
+
+.logo{
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+.hero {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 20px;
+  background:linear-gradient(140deg,#e4efe9,#c8ddd2);
+}
+
+.hero h1 {
+  font-size:64px;
+}
+
+.hero p{
+  max-width:500px;
+  margin:10px auto;
+  color:var(--muted);
+}
+
+.btn {
+  display:inline-block;
+  background:var(--green-dark);
+  color:white;
+  padding:14px 28px;
+  margin-top:20px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:var(--green);
 }
 
 .section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
+  padding:100px 20px;
+  max-width:1100px;
+  margin:auto;
 }
 
-h2 {
-  margin-bottom: 20px;
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
 }
 
-ul {
-  line-height: 1.8;
+.card {
+  background:white;
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.highlight{
+  background:var(--accent);
+  padding:60px 20px;
+  text-align:center;
+}
+
+.highlight h2{
+  font-size:40px;
+}
+
+footer {
+  background:#1c1c1c;
+  color:white;
+  text-align:center;
+  padding:60px 20px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>🌱 Grön frisörsalong i Mariehamn</h1>
-  <p>Skonsamma behandlingar för dig och miljön</p>
-  <a href="#" target="_blank">
-    <button>Boka tid</button>
-  </a>
-</header>
-
-<div class="section">
-  <h2>Därför väljer kunder oss</h2>
-  <ul>
-    <li>Inga skadliga kemikalier</li>
-    <li>Ekologiska produkter</li>
-    <li>Mindre allergirisk</li>
-    <li>Miljövänliga behandlingar</li>
-  </ul>
+<nav>
+<div class="logo">SAXOFÖNEN</div>
+<div>
+<a href="#">Om oss</a>
+<a href="#">Tjänster</a>
+<a href="#">Hållbarhet</a>
+<a class="btn" href="http://www.saxofonen.ax/wp-content/themes/spatreats/images/saxofonen-bokatid.html" target="_blank">Boka tid</a>
 </div>
+</nav>
 
-<div class="section">
-  <h2>Våra tjänster</h2>
-  <ul>
-    <li>Klippning</li>
-    <li>Färg & slingor</li>
-    <li>Ekologisk växtfärg</li>
-    <li>Styling & behandlingar</li>
-  </ul>
+<section class="hero">
+<div>
+<h1>Grön frisörsalong i Mariehamn</h1>
+<p>Ekologiska behandlingar, renare produkter och en tryggare upplevelse — för både dig och miljön.</p>
+<a class="btn" href="http://www.saxofonen.ax/wp-content/themes/spatreats/images/saxofonen-bokatid.html" target="_blank">Boka din tid</a>
 </div>
+</section>
 
-<div class="section">
-  <h2>Vårt hållbara tänk</h2>
-  <ul>
-    <li>Ekologiska produkter</li>
-    <li>Återvinning & sopsortering</li>
-    <li>Plastfritt</li>
-    <li>Grön el</li>
-  </ul>
-</div>
+<section class="section">
+<h2>En tryggare salong</h2>
+<p>Som certifierad grön salong arbetar vi utan skadliga kemikalier. Våra produkter är noggrant utvalda för att vara skonsamma mot både kropp och miljö — utan att kompromissa med resultatet.</p>
+</section>
 
-<div class="section" style="text-align:center;">
-  <h2>Boka din tid idag</h2>
-  <a href="#" target="_blank">
-    <button>Boka nu</button>
-  </a>
+<section class="section">
+<h2>Tjänster</h2>
+<div class="grid">
+<div class="card"><h3>Klippning</h3><p>Dam, herr och barn — från underhåll till ny stil.</p></div>
+<div class="card"><h3>Färgning</h3><p>Ekologiska växtfärger och skonsamma alternativ.</p></div>
+<div class="card"><h3>Slingor & Balayage</h3><p>Naturliga resultat med moderna tekniker.</p></div>
+<div class="card"><h3>Styling</h3><p>Fön, feststyling och formning.</p></div>
 </div>
+</section>
+
+<section class="highlight">
+<h2>Hållbarhet i varje detalj</h2>
+<p>Från ekologiska produkter till återvinning och energival — vi arbetar aktivt för en mer hållbar salong.</p>
+</section>
+
+<section class="section">
+<h2>Redo för en ny upplevelse?</h2>
+<p>Boka enkelt online — precis som tidigare.</p>
+<a class="btn" href="http://www.saxofonen.ax/wp-content/themes/spatreats/images/saxofonen-bokatid.html" target="_blank">Boka nu</a>
+</section>
+
+<footer>
+<p>© Saxofönen — Mariehamn</p>
+</footer>
 
 </body>
 </html>
